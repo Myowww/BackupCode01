@@ -1,0 +1,119 @@
+body{
+    padding: 0;
+
+    display: flex;
+    justify-self: center;
+    counter-reset: h2counter;
+}
+
+.container{
+    width: 1028px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.section{
+    counter-reset: h3counter;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 50px 0 20px 0;
+    counter-increment: h2counter;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    
+    margin: 10px 0 10px 0;
+    counter-increment: h3counter;
+}
+
+h2::before{
+    content: "0"counter(h2counter)" ";
+    color: black;
+    font-weight: 600;
+}
+
+h3::before{
+    content: counter(h3counter) ". ";
+    color: black;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+caption{
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1;
+    overflow: hidden;
+}
+
+ol{
+    margin: 0;
+}
+
+
+ul{
+    margin: 0;
+}
+
+ol > li > ul > li {
+    font-weight: 400;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    text-align: center;
+
+    margin: 10px 0 10px 0;
+}
+
+
+thead > tr > th {
+    background-color: #FFD600;
+    font-weight: 500;
+}
+
+td, th{
+    border: 1px solid black;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px;
+}
+
+td:first-child, th:first-child{
+    border-left: none;
+}
+
+td:last-child, th:last-child{
+    border-right: none;
+}
+
+.target{
+    text-align: left;
+}
+
+ul{
+    line-height: 32px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+li::before{
+    content: "- ";
+    color: black;
+    font-weight: 400;
+    margin-right: 8px;
+    margin-left: 15px;
+}
+
+th{
+    background-color: rgb(255, 245, 200);
+}
